@@ -6,80 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- 합쳐지고 최소화된 최신 CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-    <!-- 부가적인 테마 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
-    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <style>
-    .body {
-       margin:0;
-       padding:0;
-       height:100%;
-       width:100%;
-    }
-    .contents-wrap {
-       min-height:100%;
-       position:absolute;
-       padding-bottom:100px;/* footer height */
-    }
-    .footer {
-       width:127%;
-       height:100px;
-       position:absolute;
-       bottom:0;
-       background:#464646;
-      text-align: center;
-      color: white;
-    }
-    </style>
 </head>
+{% extends 'base.html' %}
+
+{% block contents %}
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Kim-HongIn</a>
-          </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="{% url 'hobby' %}">취미 <span class="sr-only">(current)</span></a></li>
-              <li><a href="{% url 'place' %}">장소</a></li>
-              <li><a href="{% url 'music' %}">음악</a></li>
-              <li><a href="{% url 'picture' %}">사진</a></li>
-              <li><a href="{% url 'diary' %}">일기</a></li>
-              <li><a href="#">Other things</a></li>
-            </ul>
-            
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
 
       들어가야 할 내용 
       : 프로필 사진, 00재학 중, 학과, 관심있는 내용, cv 등등
 
-      <div class="container contents-wrap">
-        <sitemesh:write property='body' />
-        <footer class="footer">
-            <br>
-             <div>김홍인의 자기소개 페이지</div>
-             <br>
-             <div>2021년 7월 29일 제작 완료</div>
-             <div>문의 : ghddls00@naver.com</div>
-        </footer>
-  </div>
-  <script type="text/javascript"  src="/resources/js/common.js"></script>
-
 </body>
+
+{% endblock %}
 </html>
