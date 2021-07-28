@@ -25,4 +25,7 @@ urlpatterns = [
     path('music/', views.music, name="music"),
     path('picture/', views.picture, name="picture"),
     path('diary/', views.diary, name="diary"),
+    path('detail/<str:id>', views.detail, name="detail"),
+    path('new/', views.new, name="new"),
+    path('create/', views.create, name="create"),
 ]
