@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+
 <head>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -87,6 +89,7 @@ form.go-right input:focus + label, form.go-right textarea:focus + label {
     </style>
 </head>
 
+{% block contents %}
 <body>
     <div class="container">
         <div class="row">
@@ -107,3 +110,4 @@ form.go-right input:focus + label, form.go-right textarea:focus + label {
         </div>
     </div>
 </body>
+{% endblock %}

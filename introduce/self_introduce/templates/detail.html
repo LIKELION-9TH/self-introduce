@@ -1,3 +1,27 @@
-{{diary.title}}
-{{diary.pub_date}}
-{{diary.body}}
+{% extends 'base.html' %}
+<head>
+    <style>
+        .contents{
+            margin-left: 200px;
+            background-color: rgb(192, 192, 192);
+        }
+    </style>
+</head>
+{% block contents %}
+<body>
+
+<div class="contents" style="padding-left: 300px; padding-right: 300px; background-color: rgb(194, 194, 194);">
+    <h1><br>제목 : {{diary.title}}</h1>
+    <br>
+    <p>작성 날짜 : {{diary.pub_date}}</p>
+    <br>
+    <h4>{{diary.body}}</h4><br>
+</div>
+<br><br>
+<a href="{% url 'diary' %}" style="padding-left: 300px;"><button type="button">돌아가기</button></a>
+
+<a href="{% url 'edit' diary.id %}" style="padding-left: 300px;"><button type="button">수정하기</button></a>
+
+<a href="{% url 'delete' diary.id %}" style="padding-left: 300px;"><button type="button">삭제하기</button></a>
+</body>
+{% endblock %}

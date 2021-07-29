@@ -1,7 +1,54 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block contents %}
-<body>
-장소
-</body>
+    <body>
+
+        <br>
+        <h1 style="padding-left: 150px;">My Favorite Place</h1>
+        <br><br><br>
+        <table border = "1" style="margin: auto;">
+            <tr>
+                <td height = "0">
+                 <div style = "height:100%"><img src = "{% static '장소1.jpg' %}" width="600px" height="400px"></div>
+                </td>
+                <td>
+                 <span style = "font-size : 15px;"  style="line-height: 200%; text-align: center;" ><strong>친구들과 함께 갔던 여행지의 숙소</strong><br><br>친구들과 제주도 여행을 갔었는데, 그때 묵었던 숙소가 정말 아늑하고 바댜뷰도 예뻤어서 아직까지도 <br>정말 좋아하는 장소입니다. 다음에 또 제주도 여행을 가면 같은 숙소에 묵고 싶어요.</span>
+                </td>
+            </tr>
+            <tr>
+                <td height = "0">
+                 <div style = "height:100%"><img src = "{% static '장소4.jpg' %}" width="600px" height="400px"></div>
+                </td>
+                <td>
+                 <span style = "font-size : 15px;">안녕하세요</span>
+                </td>
+            </tr>
+            <tr>
+                <td height = "0">
+                 <div style = "height:100%"><img src = "{% static '장소5.jpg' %}" width="600px" height="400px"></div>
+                </td>
+                <td>
+                 <span style = "font-size : 15px;">안녕하세요</span>
+                </td>
+            </tr>
+            <tr>
+                <td height = "0">
+                 <div style = "height:100%"><img src = "{% static '장소6.jpg' %}" width="600px" height="400px"></div>
+                </td>
+                <td>
+                 <span style = "font-size : 15px;">안녕하세요</span>
+                </td>
+            </tr>
+            <tr>
+                <td height = "0">
+                 <div style = "height:100%"><img src = "{% static '장소7.jpg' %}" width="600px" height="400px"></div>
+                </td>
+                <td>
+                 <span style = "font-size : 15px;">안녕하세요</span>
+                </td>
+            </tr>
+        </table>
+        <br><br><br>
+    </body>
 {% endblock %}

@@ -37,3 +37,20 @@ def create(request):
     new_diary.body = request.POST['body']
     new_diary.save()
     return redirect('detail', new_diary.id)
+
+def edit(request, id):
+    edit_diary = Diary.objects.get(id=id)
+    return render(request, 'edit.html', {'diary': edit_diary})
+
+def update(request, id):
+    update_diary = Diary.objects.get(id=id)
+    update_diary.title = request.POST['title']
+    update_diary.pub_date = timezone.now()
+    update_diary.body = request.POST['body']
+    update_diary.save()
+    return redirect('detail', update_diary.id)
+
+def delete(request, id):
+    delete_diary = Diary.objects.get(id=id)
+    delete_diary.delete()
+    return redirect('diary')
