@@ -19,10 +19,11 @@
 {% block contents %}
 <body>
     <div class="body">
+        <br><br>
         <h1 class="name" style="margin-left: 50px;">My Diary</h1>
         <br>
         <a href="{% url 'new' %}"><button type="button" class="btn btn-default" style="margin-left: 50px;">일기 쓰기</button></a>
-        <br><br>
+        <br><br><br>
         <div class="list-group">
             {% for diary in diarys %}
             <a href="{% url 'detail' diary.id %}" class="list-group-item">{{diary.title}}, {{diary.pub_date}}</a>

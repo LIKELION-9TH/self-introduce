@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +9,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
-{% extends 'base.html' %}
+
 
 {% block contents %}
 <body>
-    <img src="..." alt="..." class="img-circle">
-      들어가야 할 내용 
-      : 프로필 사진, 00재학 중, 학과, 관심있는 내용, cv 등등
+    <br><br><br><br>
+      <div class="row">
+        <div class="col-md-4" style="background-color: rgb(194, 194, 194);"><br> <img src="{% static '프사.jpg' %}" class="img-circle" width="393px" height="393px" style="margin-left:50px;"><br><h3 style="margin-left:180px;">profile picture</h3></div>
+        <div class="col-md-8" style="background-color: rgb(194, 194, 194);" style="padding-left:10000px;"><h2><br><br><br>Introduce</h2><br> 
+        
+        <table class="table" style="margin-left:150px;">
+            <tr>
+                <td><strong>이름</strong></td>
+                <td>김홍인 Kim HongIn</td>
+            </tr>
 
+            <tr>
+                <td><strong>학과/학번/나이</strong></td>
+                <td>주전공 심리학과, 복수전공 통계학과/ 17학번 / 24살(98년생)</td>
+            </tr>
+
+            <tr>
+                <td><strong>연락처</strong></td>
+                <td>이메일 : ghddls00@naver.com<br> </td>
+            </tr>
+
+            <tr>
+                <td><strong>인삿말</strong></td>
+                <td>안녕하세요!</td>
+            </tr>
+        </table>
+        <br><br><br><br><br><br>
+        </div>
+    </div>
 </body>
 
 {% endblock %}

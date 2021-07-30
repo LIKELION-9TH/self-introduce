@@ -1,77 +1,78 @@
 {% extends 'base.html' %}
 {% load static %}
 <head>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <style>
-  .gallery-title
-{
-    font-size: 36px;
-    color: #42B32F;
-    text-align: center;
-    font-weight: 500;
-    margin-bottom: 70px;
-}
-.gallery-title:after {
-    content: "";
-    position: absolute;
-    width: 7.5%;
-    left: 46.5%;
-    height: 45px;
-    border-bottom: 1px solid #5e5e5e;
-}
-
-
-.port-image
-{
-    width: 100%;
-}
-
-.gallery_product
-{
-    margin-bottom: 30px;
-}
 
 </style>
 </head>
 {% block contents %}
 <body>
 
- <div class="container">
-        <div class="row">
-          <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h1 class="gallery-title">The Pictures I Took</h1>
-          </div>
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <img src="{% static '1.jpg' %}" class="img-responsive">
-            </div>
 
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-                <img src="{% static '2.jpg' %}" class="img-responsive">
-            </div>
+<div class="contents" style="margin-left: 150px; padding: 100px;">
+    <div class="media">
+        <div class="media-left media-middle">
+            <img class="media-object" src="{% static '1.jpg' %}" width="600px" height="400px">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><br><br><br><strong>Palace Reflected in Water</strong></h4>
+    </div>
 
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <img src="{% static '3.jpg' %}" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="{% static '4.jpg' %}" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                <img src="{% static '5.jpg' %}" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="{% static '6.jpg' %}" class="img-responsive">
-            </div>
-
+    <div class="media">
+        <div class="media-left media-middle">
+            <img class="media-object" src="{% static '2.jpg' %}" width="600px" height="400px">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><br><br><br><strong>In the Leaf Cave</strong></h4>
         </div>
     </div>
-</section>
+
+    <div class="media">
+        <div class="media-left media-middle">
+            <img class="media-object" src="{% static '3.jpg' %}" width="600px" height="400px">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><br><br><br><strong>Autumn Perfume</strong></h4>
+        </div>
+    </div>
+
+    <div class="media">
+        <div class="media-left media-middle">
+            <img class="media-object" src="{% static '4.jpg' %}" width="600px" height="400px">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><br><br><br><strong>Deep Blue Paint in the Sky</strong></h4>
+        </div>
+    </div>
+
+    <div class="media">
+        <div class="media-left media-middle">
+            <img class="media-object" src="{% static '5.jpg' %}" width="600px" height="400px">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><br><br><br><strong>Red Car for Children</strong></h4>
+        </div>
+    </div>
+
+    <div class="media">
+        <div class="media-left media-middle">
+            <img class="media-object" src="{% static '6.jpg' %}" width="600px" height="400px">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><br><br><br><strong>The Cat on the Roof</strong></h4>
+        </div>
+    </div>
+</div>
+
 <br><br><br>
 </body>
 {% endblock %}
